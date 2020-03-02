@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="103" id="KGk-i7-Jjw" customClass="StepCounterTableCell" customModule="RoadToRLCS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="495" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acC-7L-gjR" userLabel="colorBackgroundView">
+                        <rect key="frame" x="12" y="8" width="471" height="87"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="566-TU-3qx" userLabel="Stat">
+                                <rect key="frame" x="16" y="33.5" width="43" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" name="AntiFlashWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yC0-69-z8u" userLabel="Total">
+                                <rect key="frame" x="230" y="33.5" width="11" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <color key="textColor" name="AntiFlashWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="rnd-Rk-vcS">
+                                <rect key="frame" x="361" y="12" width="94" height="63"/>
+                                <color key="backgroundColor" name="AntiFlashWhite"/>
+                                <color key="tintColor" name="RichBlack"/>
+                                <connections>
+                                    <action selector="valueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="iRA-hV-vTs"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" name="OuterSpace"/>
+                        <constraints>
+                            <constraint firstItem="566-TU-3qx" firstAttribute="centerY" secondItem="rnd-Rk-vcS" secondAttribute="centerY" id="7sU-vD-Czr"/>
+                            <constraint firstItem="yC0-69-z8u" firstAttribute="centerY" secondItem="rnd-Rk-vcS" secondAttribute="centerY" id="Bbf-tW-C4A"/>
+                            <constraint firstItem="yC0-69-z8u" firstAttribute="centerX" secondItem="acC-7L-gjR" secondAttribute="centerX" id="ETt-hY-e5d"/>
+                            <constraint firstItem="566-TU-3qx" firstAttribute="leading" secondItem="acC-7L-gjR" secondAttribute="leading" constant="16" id="Gkc-DF-MJU"/>
+                            <constraint firstAttribute="bottom" secondItem="rnd-Rk-vcS" secondAttribute="bottom" constant="12" id="SEs-GP-6w9"/>
+                            <constraint firstItem="rnd-Rk-vcS" firstAttribute="top" secondItem="acC-7L-gjR" secondAttribute="top" constant="12" id="lYg-ug-dac"/>
+                            <constraint firstAttribute="trailing" secondItem="rnd-Rk-vcS" secondAttribute="trailing" constant="16" id="v7Y-gl-WM0"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="RichBlack"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="acC-7L-gjR" secondAttribute="trailing" constant="12" id="Mea-SM-mn0"/>
+                    <constraint firstItem="acC-7L-gjR" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="O8C-jQ-oi5"/>
+                    <constraint firstItem="acC-7L-gjR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="XKX-Lt-9yh"/>
+                    <constraint firstAttribute="bottom" secondItem="acC-7L-gjR" secondAttribute="bottom" constant="8" id="dkH-qW-NTS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="colorBackgroundView" destination="acC-7L-gjR" id="dfe-YZ-yWl"/>
+                <outlet property="statValue" destination="yC0-69-z8u" id="sJ4-1C-Kw8"/>
+                <outlet property="stepper" destination="rnd-Rk-vcS" id="Ki8-Wj-R3f"/>
+                <outlet property="titleLabel" destination="566-TU-3qx" id="poe-Zv-Gvm"/>
+            </connections>
+            <point key="canvasLocation" x="264.49275362318843" y="144.30803571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AntiFlashWhite">
+            <color red="0.95294117647058818" green="0.93725490196078431" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="OuterSpace">
+            <color red="0.27058823529411763" green="0.28627450980392155" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RichBlack">
+            <color red="0.0" green="0.019607843137254902" blue="0.019607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
